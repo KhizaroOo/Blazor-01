@@ -1,7 +1,9 @@
 name: gh-pages
 
 on: [push]
-
+permissions:
+  contents: write
+  
 jobs:
   build:
 
