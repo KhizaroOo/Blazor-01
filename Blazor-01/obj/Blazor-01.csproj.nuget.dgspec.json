@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-01/Blazor-01/Blazor-01.csproj": {}
+    "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-Web/Blazor-01/Blazor-01/Blazor-01.csproj": {}
   },
   "projects": {
-    "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-01/Blazor-01/Blazor-01.csproj": {
+    "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-Web/Blazor-01/Blazor-01/Blazor-01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-01/Blazor-01/Blazor-01.csproj",
+        "projectUniqueName": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-Web/Blazor-01/Blazor-01/Blazor-01.csproj",
         "projectName": "Blazor-01",
-        "projectPath": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-01/Blazor-01/Blazor-01.csproj",
+        "projectPath": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-Web/Blazor-01/Blazor-01/Blazor-01.csproj",
         "packagesPath": "/Users/khizooo/.nuget/packages/",
-        "outputPath": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-01/Blazor-01/obj/",
+        "outputPath": "/System/Volumes/Data/Previous Content/Data/KhizoOo/Projects/Blazor-Web/Blazor-01/Blazor-01/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/khizooo/.nuget/NuGet/NuGet.Config"
