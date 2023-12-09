@@ -8,6 +8,11 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorOnGitHubPages' " />
   <ItemGroup>
+    <None Remove="Shared\landingpages\" />
+    <None Remove="Shared\landingpages\v2\" />
+    <None Remove="Pages\LandingPage\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\.nojekyll" />
   </ItemGroup>
 
@@ -18,4 +23,29 @@
     <PackageReference Include="System.Net.Http.Json" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\audio\" />
+    <Content Remove="wwwroot\json\" />
+    <Content Remove="wwwroot\landingpages\" />
+    <Content Remove="wwwroot\landingpages\v1\" />
+    <Content Remove="wwwroot\landingpages\v2\" />
+    <Content Remove="wwwroot\landingpages\v1\img\" />
+    <Content Remove="wwwroot\landingpages\v2\css\" />
+    <Content Remove="wwwroot\landingpages\v2\js\" />
+    <Content Remove="wwwroot\landingpages\v2\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\audio\" />
+    <Folder Include="wwwroot\json\" />
+    <Folder Include="wwwroot\landingpages\" />
+    <Folder Include="wwwroot\landingpages\v1\" />
+    <Folder Include="wwwroot\landingpages\v2\" />
+    <Folder Include="wwwroot\landingpages\v1\img\" />
+    <Folder Include="wwwroot\landingpages\v2\css\" />
+    <Folder Include="wwwroot\landingpages\v2\js\" />
+    <Folder Include="wwwroot\landingpages\v2\img\" />
+    <Folder Include="Shared\landingpages\" />
+    <Folder Include="Shared\landingpages\v2\" />
+    <Folder Include="Pages\LandingPage\" />
+  </ItemGroup>
 </Project>
