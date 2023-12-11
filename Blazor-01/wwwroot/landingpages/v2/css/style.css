@@ -3962,4 +3962,14 @@ video {
 
 /* NAVBAR */
 
+@font-face {
+    font-family: 'Rocher';
+    src: url(../fonts/RocherColorGX.woff2);
+}
+
+.OrangeShine {
+    font-family: 'Rocher';
+    font-palette: #f86633;
+}
+
 /* NAVBAR */ 
