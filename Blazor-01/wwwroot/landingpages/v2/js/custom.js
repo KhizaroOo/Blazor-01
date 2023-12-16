@@ -65,7 +65,7 @@
 		/*  PORTFOLIO GALLERY
 		/* ----------------------------------------------------------- */
 
-		if ($('.gridlist').length) {
+		if ($('#Artfulness-Gallery').length) {
 			new CBPGridGallery(document.getElementById('grid-gallery'));
 		}
 
