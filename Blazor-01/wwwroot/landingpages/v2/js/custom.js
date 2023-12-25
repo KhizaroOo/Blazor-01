@@ -1,10 +1,10 @@
-(function ($) {
+(function($) {
 
 	"use strict";
 
 	/* ----------------------------------------------------------- */
 	/*  FUNCTION TO STOP LOCAL AND YOUTUBE VIDEOS IN SLIDESHOW
-	/* ----------------------------------------------------------- */
+    /* ----------------------------------------------------------- */
 
 	function stop_videos() {
 		var video = document.getElementById("video");
@@ -14,24 +14,36 @@
 		$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
 	}
 
-	$(window).on("load", function () {
+	$(window).on("load", function() {
 
 		/* ----------------------------------------------------------- */
 		/*  PAGE PRELOADER
-		/* ----------------------------------------------------------- */
-
+        /* ----------------------------------------------------------- */
+		
 		var preloader = $('#preloader');
-		setTimeout(function () {
+
+		setTimeout(function() {
 			preloader.addClass('preloaded');
 		}, 800);
 
+		var elements = document.querySelectorAll('.card__img--hover');
+
+		// Iterate through each element
+		elements.forEach(function (element) {
+			// Get the value of the 'data-img' attribute
+			var imagePath = element.getAttribute('data-img');
+
+			// Set the background-image property
+			element.style.backgroundImage = 'url(' + imagePath + ')';
+		});
+
 	});
 
-	$(document).ready(function () {
+	$(document).ready(function() {
 
 		/* ----------------------------------------------------------- */
 		/*  STOP VIDEOS
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
 		$('.slideshow nav span').on('click', function () {
 			stop_videos();
@@ -51,7 +63,7 @@
 
 		/* ----------------------------------------------------------- */
 		/*  DESKTPOP MENU
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
 		$('#desktop-nav li').on('click', function () {
 			$('#desktop-nav li').removeClass('active');
@@ -63,17 +75,17 @@
 
 		/* ----------------------------------------------------------- */
 		/*  PORTFOLIO GALLERY
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
-		if ($('#Artfulness-Gallery').length) {
-			new CBPGridGallery(document.getElementById('grid-gallery'));
+		if ($('.gridlist').length) {
+			new CBPGridGallery(document.getElementById( 'Artfulness-Gallery' ) );
 		}
 
 		/* ----------------------------------------------------------- */
 		/*  HIDE HEADER WHEN PORTFOLIO SLIDESHOW OPENED
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
-		$(".gridlist figure").on('click', function () {
+		$(".gridlist figure").on('click', function() {
 			$("#navbar-collapse-toggle").addClass('hide-header');
 			if ($(window).width() < 992) {
 				$('#menuToggle').addClass('hideMenuToggle');
@@ -82,19 +94,19 @@
 
 		/* ----------------------------------------------------------- */
 		/*  SHOW HEADER WHEN PORTFOLIO SLIDESHOW CLOSED
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
-		$(".nav-close").on('click', function () {
+		$(".nav-close").on('click', function() {
 			$("#navbar-collapse-toggle").removeClass('hide-header');
 			$('#menuToggle').removeClass('hideMenuToggle');
 		});
-		$(".nav-prev").on('click', function () {
+		$(".nav-prev").on('click', function() {
 			if ($('.slideshow ul li:first-child').hasClass('current')) {
 				$("#navbar-collapse-toggle").removeClass('hide-header');
 				$('#menuToggle').removeClass('hideMenuToggle');
 			}
 		});
-		$(".nav-next").on('click', function () {
+		$(".nav-next").on('click', function() {
 			if ($('.slideshow ul li:last-child').hasClass('current')) {
 				$("#navbar-collapse-toggle").removeClass('hide-header');
 				$('#menuToggle').removeClass('hideMenuToggle');
@@ -103,7 +115,7 @@
 
 		/* ----------------------------------------------------------- */
 		/*  PORTFOLIO DIRECTION AWARE HOVER EFFECT
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
 		var item = $(".gridlist li figure");
 		var elementsLength = item.length;
@@ -115,16 +127,16 @@
 
 		/* ----------------------------------------------------------- */
 		/*  AJAX CONTACT FORM
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 
-		$("#contactform").on("submit", function () {
+		$("#contactform").on("submit", function() {
 			$("#message").text("Sending...");
 			var form = $(this);
 			$.ajax({
 				url: form.attr("action"),
 				method: form.attr("method"),
 				data: form.serialize(),
-				success: function (result) {
+				success: function(result) {
 					if (result === "success") {
 						$("#contactform").find(".output_message").addClass("success");
 						$("#message").text("Message Sent!");
@@ -139,11 +151,11 @@
 
 	});
 
-	$(document).keyup(function (e) {
+	$(document).keyup(function(e) {
 
 		/* ----------------------------------------------------------- */
 		/*  KEYBOARD NAVIGATION IN PORTFOLIO SLIDESHOW
-		/* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
 		if (e.keyCode === 27) {
 			stop_videos();
 			$('.close-content').click();

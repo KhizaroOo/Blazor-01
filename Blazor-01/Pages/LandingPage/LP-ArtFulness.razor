@@ -1,4 +1,15 @@
-﻿<!-- Portfolio Starts -->
+﻿@using Blazor_01.AppData;
+@using Newtonsoft.Json;
+@using Microsoft.CSharp;
+
+@{
+
+
+
+
+}
+
+<!-- Artfulness Starts -->
 <div class="page animation-top" id="artfulness">
     <div class="w-full">
         <!-- Section Title Starts -->
@@ -9,34 +20,40 @@
             <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-light-grey-2 -translate-y-1/2 uppercase xs:hidden">art works</span>
         </div>
         <!-- Section Title Ends -->
-        <!-- Portfolio Items Starts -->
+        <!-- My Arts Starts -->
         <div class="-mt-15 pb-60 xs:pb-20 portfolio">
-            <div id="Artfulness-Gallery" class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto">
-                <!-- Portfolio Grid Starts -->
-                <div class="grid-wrap mx-auto mb-25">
-                    <ul class="gridlist" style="position: relative; height: 737.577px;">
-                        <!-- Portfolio Grid Item Starts -->
-                        <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
-                            <figure class="transition duration-300 rounded-5 relative overflow-hidden">
-                                <img class="block relative w-full rounded-5 transition duration-300" src="landingpages/v2/img/project-1.jpg" alt="">
-                                <div class="absolute w-full h-full flex items-center justify-center bg-accent">
-                                    <span class="uppercase text-fs-18 text-white">
-                                        image project
-                                    </span>
+
+            <section class="hero-section">
+
+                <div class="card-grid">
+                    
+                    @{
+                        foreach (Art art in MyAllArts)
+                        {
+
+                            <a class="card" href="#">
+                                <div class="card__background"
+                                     style="background-image: url(@art.IMG)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">@art.Type - @art.Category</p>
+                                    <h3 class="card__heading">@((MarkupString)art.Title)</h3>
                                 </div>
-                            </figure>
-                        </li>
-                        <!-- Portfolio Grid Item Ends -->
-                    </ul>
+                            </a>
+
+                        }
+                    }
+
                 </div>
-                <!-- Portfolio Grid Ends -->
-            </div>
+
+            </section>
+
         </div>
-        <!-- Portfolio Items Ends -->
+        <!-- My Art Ends -->
     </div>
 </div>
-<!-- Portfolio Ends -->
+<!-- Artfulness Ends -->
 
 @code {
 
+    List<Art> MyAllArts = new MyArts().GetMyArts(1000);
 }

@@ -35,6 +35,10 @@
     <Content Remove="wwwroot\landingpages\v2\css\" />
     <Content Remove="wwwroot\landingpages\v2\js\" />
     <Content Remove="wwwroot\landingpages\v2\img\" />
+    <Content Remove="wwwroot\images\" />
+    <Content Remove="wwwroot\images\MyArts\" />
+    <Content Remove="wwwroot\images\MyInfographics\" />
+    <Content Remove="wwwroot\images\MyWordplays\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\audio\" />
@@ -49,5 +53,9 @@
     <Folder Include="Shared\landingpages\" />
     <Folder Include="Shared\landingpages\v2\" />
     <Folder Include="Pages\LandingPage\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\MyArts\" />
+    <Folder Include="wwwroot\images\MyInfographics\" />
+    <Folder Include="wwwroot\images\MyWordplays\" />
   </ItemGroup>
 </Project>
