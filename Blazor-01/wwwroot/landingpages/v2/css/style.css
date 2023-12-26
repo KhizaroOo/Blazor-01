@@ -4012,7 +4012,8 @@ video {
 .card {
     list-style: none;
     position: relative;
-    margin:10px;
+    margin:2px;
+    border:1px solid black;
 }
 
     .card:before {
