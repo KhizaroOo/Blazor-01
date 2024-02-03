@@ -23,32 +23,38 @@
         <!-- My InfoGraphic Starts -->
         <div class="-mt-15 pb-60 xs:pb-20 portfolio">
 
-            <section class="hero-section">
-
-                <div class="card-grid">
+            <section class="hero-section-simple">
+                <div class="card-grid-simple">
 
                     @{
                         foreach (Infographic art in MyAllInfographics)
                         {
 
-                            <a class="card" href="#">
-                                <div class="card__background"
-                                     style="background-image: url(@art.IMG)"></div>
-                                <div class="card__content">
-                                    <p class="card__category">@art.Type - @art.Category</p>
-                                    <h3 class="card__heading">@((MarkupString)art.Title)</h3>
+                            <a class="card-simple" href="#">
+                                <div class="card__background-simple" style="background-image: url(@art.List_IMG_URL)"></div>
+                                <div class="card__content-simple">
+                                    <p class="card__category-simple">@art.Type - @art.Category</p>
+                                    <h3 class="card__heading-simple">@((MarkupString)art.Title)</h3>
                                 </div>
                             </a>
+
 
                         }
                     }
 
                 </div>
-
             </section>
 
         </div>
         <!-- My InfoGraphic Ends -->
+
+        <div class="mx-auto w-full relative py-80 text-center xs:px-25 xs:pt-16 xs:pb-14 xs:bg-light-grey xs:border-b xs:border-grey xs:fixed xs:left-0 xs:right-0 xs:top-0 xs:z-20">
+            <a class="button group mt-30 overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out" href="https://www.linkedin.com/in/khizar-imtiaz/" target="_blank">
+                <span class="relative z-20 text-black-6 group-hover:text-white transition-all duration-300" style="color: white;">view more infographics</span>
+                <span class="absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-download bg-accent"></span>
+            </a>
+        </div>
+
     </div>
 </div>
 <!-- InfoGraphics Ends -->
