@@ -6,7 +6,7 @@
     <RootNamespace>Blazor_01</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorOnGitHubPages' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorGitHubPagesDemo' " />
   <ItemGroup>
     <None Remove="Shared\landingpages\" />
     <None Remove="Shared\landingpages\v2\" />
@@ -25,21 +25,6 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Remove="wwwroot\audio\" />
-    <Content Remove="wwwroot\json\" />
-    <Content Remove="wwwroot\landingpages\" />
-    <Content Remove="wwwroot\landingpages\v1\" />
-    <Content Remove="wwwroot\landingpages\v2\" />
-    <Content Remove="wwwroot\landingpages\v1\img\" />
-    <Content Remove="wwwroot\landingpages\v2\css\" />
-    <Content Remove="wwwroot\landingpages\v2\js\" />
-    <Content Remove="wwwroot\landingpages\v2\img\" />
-    <Content Remove="wwwroot\images\" />
-    <Content Remove="wwwroot\images\MyArts\" />
-    <Content Remove="wwwroot\images\MyInfographics\" />
-    <Content Remove="wwwroot\images\MyWordplays\" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\audio\" />
     <Folder Include="wwwroot\json\" />
