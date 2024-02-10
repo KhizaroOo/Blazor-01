@@ -1,11 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+   <!-- <OutputType>WinExe</OutputType>-->
+    <OutputType>Library</OutputType>
+    <Configurations>Debug;Release;Local</Configurations>
   </PropertyGroup>
-
+  <PropertyGroup>
+   <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+</PropertyGroup> 
 <!--
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
@@ -15,7 +20,30 @@
     <RootNamespace>Blazor_01</RootNamespace>
   </PropertyGroup>-->
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Blazor-01' " />
+<!--  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Blazor-01' " />-->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latestmajor</LangVersion>
+    <PlatformTarget>anycpu</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latestmajor</LangVersion>
+    <DefineConstants></DefineConstants>
+    <AssemblyName></AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Local|AnyCPU' ">
+    <IntermediateOutputPath>obj\Local</IntermediateOutputPath>
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Local</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn></NoWarn>
+    <LangVersion>latestmajor</LangVersion>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <Nullable></Nullable>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="Shared\landingpages\" />
     <None Remove="Shared\landingpages\v2\" />
@@ -26,8 +54,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.7" />
-    <PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
@@ -35,16 +63,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\audio\" />
     <Folder Include="wwwroot\json\" />
-    <Folder Include="wwwroot\landingpages\" />
-    <Folder Include="wwwroot\landingpages\v1\" />
-    <Folder Include="wwwroot\landingpages\v2\" />
-    <Folder Include="wwwroot\landingpages\v1\img\" />
-    <Folder Include="wwwroot\landingpages\v2\css\" />
-    <Folder Include="wwwroot\landingpages\v2\js\" />
-    <Folder Include="wwwroot\landingpages\v2\img\" />
-    <Folder Include="Shared\landingpages\" />
-    <Folder Include="Shared\landingpages\v2\" />
-    <Folder Include="Pages\LandingPage\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\images\MyArts\" />
     <Folder Include="wwwroot\images\MyInfographics\" />
