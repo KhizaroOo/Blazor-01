@@ -19,8 +19,8 @@ jobs:
       - name: Build and publish
         run: |
           dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o ./publish
+          dotnet build MVC-07 --configuration Release
+          dotnet publish MVC-07 -c Release -o ./publish
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
