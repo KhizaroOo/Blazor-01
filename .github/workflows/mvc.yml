@@ -1,31 +1,33 @@
 name: GitHub Pages - MVC7.0
 
+
 on:
   push:
     branches:
-      - main  # adjust this to your main branch name
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 7.0.x  # adjust to the version you're using
+          dotnet-version: '7.0.x'
 
       - name: Build and publish
         run: |
           dotnet restore
-          dotnet build MVC-07/MVC-07.csproj -c Release -o release --nologo
-          dotnet publish MVC-07/MVC-07.csproj -c Release -o ./publish
+          dotnet build --configuration Release
+          dotnet publish -c Release -o ./publish
 
-      - name: MVC-07 Deployment
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: gh-pages  # adjust if you're deploying to a different branch
-          folder: ./publish/wwwroot  # adjust to the path where your static files are generated
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: ./publish
+          BUILD_SCRIPT: dotnet build --configuration Release
