@@ -20,10 +20,10 @@ jobs:
       - name: Build and publish
         run: |
           dotnet restore
-          dotnet build --configuration Release --no-restore
-          dotnet publish -c Release -o ./publish
+          dotnet build MVC-07/MVC-07.csproj -c Release -o release --nologo
+          dotnet publish MVC-07/MVC-07.csproj -c Release -o ./publish
 
-      - name: Deploy to GitHub Pages
+      - name: MVC-07 Deployment
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages  # adjust if you're deploying to a different branch
