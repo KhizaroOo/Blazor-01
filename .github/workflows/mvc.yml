@@ -1,5 +1,4 @@
 name: GitHub Pages - MVC7.0
-
 on:
   push:
     branches:
@@ -20,14 +19,13 @@ jobs:
       - name: Build and publish
         run: |
           dotnet restore
-          dotnet build MVC-07/MVC-07.csproj --configuration Release
-          dotnet publish MVC-07 -c Release -o ./publish
+          dotnet build --configuration Release
+          dotnet publish -c Release -o ./publish
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ./publish/wwwroot
-          BUILD_SCRIPT: dotnet build --configuration Release
-
+          FOLDER: ./publish/wwwroot  # Adjust this path if your static files are in a different folder
+          BUILD_SCRIPT: dotnet publish -c Release -o ./publish
