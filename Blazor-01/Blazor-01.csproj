@@ -15,7 +15,7 @@
     <RootNamespace>Blazor_01</RootNamespace>
   </PropertyGroup>-->
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Blazor-01' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorGitHubPagesDemo' " />
   <ItemGroup>
     <None Remove="Shared\landingpages\" />
     <None Remove="Shared\landingpages\v2\" />
