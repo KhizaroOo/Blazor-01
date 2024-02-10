@@ -27,5 +27,5 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ./publish/wwwroot  # Adjust this path if your static files are in a different folder
+          FOLDER: ./publish  # Adjust this path if your static files are in a different folder
           BUILD_SCRIPT: dotnet publish -c Release -o ./publish
