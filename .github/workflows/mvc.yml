@@ -1,6 +1,5 @@
 name: GitHub Pages - MVC7.0
 
-
 on:
   push:
     branches:
@@ -29,5 +28,6 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ./publish
+          FOLDER: ./publish/wwwroot
           BUILD_SCRIPT: dotnet build --configuration Release
+
