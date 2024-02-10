@@ -26,4 +26,4 @@ jobs:
       run: dotnet test
 
     - name: Publish
-      run: dotnet publish -c Release -o ./publish
+      run: dotnet publish MVC-07 -c Release -o ./publish
