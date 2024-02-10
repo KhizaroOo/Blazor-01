@@ -26,7 +26,7 @@ jobs:
       run: dotnet test
 
     - name: Publish
-      run: dotnet publish MVC-07 -c Release -o ./publish
+      run: dotnet publish MVC-07/MVC-07.csproj -c Release -o ./publish
 
     - name: Deploy to GP
       uses: JamesIves/github-pages-deploy-action@releases/v3
