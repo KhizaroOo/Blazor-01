@@ -36,7 +36,7 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <!-- My Social META -->
     <!-- Common META -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="KhizoOo-Theme" content="KhizoOo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -51,22 +51,23 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <!-- Title -->
     <title>khizooo.com</title>
 
-
     <!-- Favicon -->
     <link title="Favicon" rel="icon" type="image/png" href="favicons/Favicon-16.png">
 
     <!-- Template Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Teko:wght@300;400;500;600;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
     <!-- Template CSS Files -->
+    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="~/css/animate.css">
     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/aos.css">
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
     <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/icomoon.css">
 
     <!-- Custom Styles CSS -->
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
@@ -75,38 +76,23 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
 <body>
 
 
-    <div id="colorlib-page">
+    <div id="khizooo-page">
 
-        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <a href="#" class="js-khizooo-nav-toggle khizooo-nav-toggle"><i></i></a>
 
         <!-- Left Sidebar -->
-        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
-
-            <h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url(images/bg_1.jpg);">KHIZOOO</a></h1>
-            <nav id="colorlib-main-menu" role="navigation">
-                <ul>
-                    <li class="colorlib-active"><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="colorlib-footer">
-                <p class="pfooter">
-                    Copyright ©
-                    <script>document.write(new Date().getFullYear());</script>2024 All rights reserved.
-                </p>
-                <a b-zm1jlgu3xn="" href="https://khizooo.com" target="_blank">khizooo.com</a>
-            </div>
-        </aside>
+        <partial data-name="SideFilter" name="~/Views/Shared/PartialViews/Aside.cshtml" />
         <!-- Left Sidebar -->
         <!-- Main -->
-        <div id="colorlib-main">
-            @RenderBody()
-        </div>
+        <div id="khizooo-main">
 
+            @RenderBody()
+
+            <!-- Footer -->
+            <partial data-name="Footer" name="~/Views/Shared/PartialViews/Footer.cshtml" />
+            <!-- Footer -->
+        </div>
+        <!-- Main -->
     </div>
     <!-- Main -->
     <!-- Loader -->
@@ -135,6 +121,7 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <script src="~/js/jquery.stellar.min.js"></script>
     <script src="~/js/owl.carousel.min.js"></script>
     <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/aos.js"></script>
     <script src="~/js/jquery.animateNumber.min.js"></script>
     <script src="~/js/scrollax.min.js"></script>
     <script src="~/js/main.js"></script>

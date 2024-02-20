@@ -1,3 +1,8 @@
+ AOS.init({
+ 	duration: 800,
+ 	easing: 'slide'
+ });
+
 (function($) {
 
 	"use strict";
@@ -38,7 +43,7 @@
 
    var burgerMenu = function() {
 
-		$('.js-colorlib-nav-toggle').on('click', function(event){
+		$('.js-khizooo-nav-toggle').on('click', function(event){
 			event.preventDefault();
 			var $this = $(this);
 
@@ -57,13 +62,13 @@
 	var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
-	    var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+	    var container = $("#khizooo-aside, .js-khizooo-nav-toggle");
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
 
 	    	if ( $('body').hasClass('offcanvas') ) {
 
     			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    			$('.js-khizooo-nav-toggle').removeClass('active');
 			
 	    	}
 	    	
@@ -74,7 +79,7 @@
 			if ( $('body').hasClass('offcanvas') ) {
 
     			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    			$('.js-khizooo-nav-toggle').removeClass('active');
 			
 	    	}
 		});
@@ -104,28 +109,6 @@
 	        items:1
 	      }
 	    }
-		});
-
-		$('.author-slider').owlCarousel({
-			autoplay: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: true,
-			dots: true,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 1
-				},
-				1000:{
-					items: 1
-				}
-			}
 		});
 
 	};
@@ -169,32 +152,6 @@
 	};
 	contentWayPoint();
 
-	var counter = function() {
-		
-		$('#section-counter').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				
-			}
-
-		} , { offset: '95%' } );
-
-	}
-	counter();
-
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
@@ -202,7 +159,7 @@
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    // mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
      gallery: {
       enabled: true,
       navigateByImgClick: true,

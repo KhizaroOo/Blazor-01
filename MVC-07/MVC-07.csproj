@@ -9,4 +9,20 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\fonts\" />
+    <Content Remove="wwwroot\js\" />
+    <Content Remove="wwwroot\scss\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\scss\" />
+    <Folder Include="Views\Shared\PartialViews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Shared\PartialViews\" />
+  </ItemGroup>
 </Project>
