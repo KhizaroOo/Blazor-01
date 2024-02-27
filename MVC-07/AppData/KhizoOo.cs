@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Blazor_01.AppData
+namespace MVC_07.AppData
 {
 	public class KhizoOo
 	{

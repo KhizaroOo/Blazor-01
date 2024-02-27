@@ -1,262 +1,82 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";  
 }
 
 <!-- Landing Page -->
 <partial data-name="LandingPage" name="~/Views/Shared/PartialViews/LP.cshtml" />
 <!-- Landing Page -->
+
 <!-- ArtFulness -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <h2 class="mb-4">Art Fulness</h2>
-                <p>"Discover the soulful strokes of creativity"</p>
+                <p class="subheading">"Discover the soulful strokes of creativity"</p>
             </div>
         </div>
         <div class="photograhy">
             <div class="row no-gutters">
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_1.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 01</h3>
-                            <span>Technology</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_2.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 02</h3>
-                            <span>Nature</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_3.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 03</h3>
-                            <span>Fashion</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_4.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 04</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_5.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 05</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_6.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 06</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_7.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 07</h3>
-                            <span>Fashion, Model</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_8.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 08</h3>
-                            <span>Nature</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_9.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 09</h3>
-                            <span>Technology</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_10.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 10</h3>
-                            <span>Model</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_11.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 11</h3>
-                            <span>Fashion</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_12.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 12</h3>
-                            <span>Photography</span>
-                        </div>
-                    </a>
-                </div>
+
+                    @{
+                        foreach (var art in ViewBag.MyAllArts)
+                        {
+                            <div class="col-md-2">
+                                <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(@art.IMG);">
+                                    <div class="overlay"></div>
+                                    <div class="text text-center">
+                                        <h3>@Html.Raw(art.Title)</h3>
+                                        <span>@art.Type - @art.Category</span>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+
             </div>
         </div>
 
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn-custom">More Arts <span class="ion-ios-arrow-forward"></span></a></p>
+        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Creations <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
 </section>
 <!-- ArtFulness -->
+<b class="hr anim"></b>
 <!-- Inforfgraphics -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Art Fulness</h2>
-                <p>"Discover the soulful strokes of creativity"</p>
+                <h2 class="mb-4">Info Graphics</h2>
+                <p>"Level up your learning with powerful tech-infused infographics – visuals beat text!"</p>
             </div>
         </div>
         <div class="photograhy">
             <div class="row no-gutters">
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_1.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 01</h3>
-                            <span>Technology</span>
+
+                @{
+                    foreach (var ig in ViewBag.MyAllInfoGraphics)
+                    {
+                        <div class="col-md-2">
+                            <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@ig.IMG);">
+                                <div class="overlay"></div>
+                                <div class="text text-center">
+                                    <h3>@Html.Raw(ig.Title)</h3>
+                                    <span>@ig.Type - @ig.Category</span>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_2.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 02</h3>
-                            <span>Nature</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_3.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 03</h3>
-                            <span>Fashion</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_4.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 04</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_5.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 05</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_6.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 06</h3>
-                            <span>Travel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_7.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 07</h3>
-                            <span>Fashion, Model</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_8.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 08</h3>
-                            <span>Nature</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_9.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 09</h3>
-                            <span>Technology</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_10.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 10</h3>
-                            <span>Model</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_11.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 11</h3>
-                            <span>Fashion</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/Theme/image_12.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center">
-                            <h3>Work 12</h3>
-                            <span>Photography</span>
-                        </div>
-                    </a>
-                </div>
+                    }
+                }
+
             </div>
         </div>
 
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn-custom">More Arts <span class="ion-ios-arrow-forward"></span></a></p>
+        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Creations <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
 </section>
 <!-- Inforfgraphics -->
+<b class="hr anim"></b>
 <!-- Writings -->
 <section class="ftco-section">
     <div class="container">
@@ -379,7 +199,7 @@
             </div>
         </div>
 
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn-custom">More Arts <span class="ion-ios-arrow-forward"></span></a></p>
+        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Creations <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
 </section>
 <!-- Writings -->

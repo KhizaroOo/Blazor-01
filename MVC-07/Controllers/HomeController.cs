@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using MVC_07.AppData;
 using MVC_07.Models;
 
 namespace MVC_07.Controllers;
@@ -15,6 +16,23 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+
+        #region Arts
+
+        List<Art> MyAllArts = new MyArts().GetMyArts(24);
+
+        #endregion
+
+        #region InfoGraphics
+
+        List<Infographic> MyAllInfographics = new MyInfographics().GetMyInfographics(12);
+
+        #endregion
+
+
+        ViewBag.MyAllArts = MyAllArts;
+        ViewBag.MyAllInfographics = MyAllInfographics;
+
         return View();
     }
 
