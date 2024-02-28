@@ -29,9 +29,22 @@ public class HomeController : Controller
 
         #endregion
 
+        #region Writings
+
+        List<Writing> MyAllWritings = new MyWritings().GetMyWritings(12);
+
+        #endregion
+
+        #region ToolBoxes
+
+        List<ToolBox> MyAllToolBoxes = new MyToolBoxes().GetMyToolBoxes(12);
+
+        #endregion
 
         ViewBag.MyAllArts = MyAllArts;
         ViewBag.MyAllInfographics = MyAllInfographics;
+        ViewBag.MyAllWritings = MyAllWritings;
+        ViewBag.MyAllToolBoxes = MyAllToolBoxes;
 
         return View();
     }

@@ -7478,7 +7478,6 @@ h1, h2, h3, h4, h5,
     -webkit-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: #EFEAE4;
 }
   @media (min-width: 992px) {
     #khizooo-main {
@@ -8645,79 +8644,36 @@ textarea.form-control {
 
 
 /* Divider */
-.hr {
-    width: 100%;
-    height: 1px;
-    display: block;
+
+.Web-Divider {
     position: relative;
-    margin-bottom: 0em;
-    padding: 2em 0;
+    margin-top: 50px;
+    padding-bottom: 50px;
 }
 
-    .hr:after, .hr:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 50%;
-        left: 0;
-    }
-
-    .hr:before {
-        background: linear-gradient(90deg, #10111F 0%, #10111F 50%, transparent 50%, transparent 100%);
-        background-size: 15px;
-        background-position: center;
-        z-index: 1;
-    }
-
-    .hr:after {
-        transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
-        transition: opacity 0.3s ease, animation 0.3s ease;
-        transition: opacity 0.3s ease, animation 0.3s ease, -webkit-animation 0.3s ease;
-        background: linear-gradient(to right, #62efab 5%, #F2EA7D 15%, #F2EA7D 25%, #FF8797 35%, #FF8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%);
-        background-size: 200%;
-        background-position: 0%;
-        -webkit-animation: bar 15s linear infinite;
-        animation: bar 15s linear infinite;
-    }
-
-@-webkit-keyframes bar {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 200%;
-    }
+.Web-Divider-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, #8db986, rgb(141 185 134), #8db986);
 }
 
-@keyframes bar {
-    0% {
-        background-position: 0%;
-    }
 
-    100% {
-        background-position: 200%;
-    }
-}
-
-.hr.anim:before {
-    background: linear-gradient(90deg, #10111F 0%, #10111F 5%, transparent 5%, transparent 10%, #10111F 10%, #10111F 15%, transparent 15%, transparent 20%, #10111F 20%, #10111F 25%, transparent 25%, transparent 30%, #10111F 30%, #10111F 35%, transparent 35%, transparent 40%, #10111F 40%, #10111F 45%, transparent 45%, transparent 50%, #10111F 50%, #10111F 55%, transparent 55%, transparent 60%, #10111F 60%, #10111F 65%, transparent 65%, transparent 70%, #10111F 70%, #10111F 75%, transparent 75%, transparent 80%, #10111F 80%, #10111F 85%, transparent 85%, transparent 90%, #10111F 90%, #10111F 95%, transparent 95%, transparent 100%);
-    background-size: 150px;
-    background-position: center;
+.Web-Divider-stopper:after {
+    content: "";
+    position: absolute;
     z-index: 1;
-    -webkit-animation: bar 120s linear infinite;
-    animation: bar 120s linear infinite;
-}
-
-.hr.anim:hover:before {
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-}
-
-.hr.anim:hover:after {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    top: -6px;
+    left: calc(50% - 7px);
+    width: 14px;
+    height: 12px;
+    background-color: #8db986;
+    border-left: 1px solid #8db986;
+    border-right: 1px solid #8db986;
 }
 
 /* Divider */
