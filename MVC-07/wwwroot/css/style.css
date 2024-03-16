@@ -200,8 +200,12 @@ th {
   text-align: inherit; }
 
 label {
-  display: inline-block;
-  margin-bottom: 0.5rem; }
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.92rem;
+    color: #022200;
+    font-weight: 600;
+}
 
 button {
   border-radius: 0; }
@@ -7314,11 +7318,26 @@ a {
         color: #3a666d;
         outline: none !important;
     }
+.Heading-Color {
+    color:#D9045C;
+}
+
+.SubHeading-Color {
+    color: #022200;
+}
+
+.Anchor-Color {
+    color: #D9045C;
+}
+.Anchor-Color:hover, .Anchor-Color:focus {
+    text-decoration: none;
+    color: #3a666d;
+    outline: none !important;
+}
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
     line-height: 1.5;
-    color: #D9045C;
     font-weight: 400;
     font-family: "Poppins", Arial, sans-serif;
 }
@@ -7620,7 +7639,6 @@ h1, h2, h3, h4, h5,
     .hero-wrap .text h1 {
         letter-spacing: 1px;
         font-weight: 900;
-        color: #D9045C;
     }
     .hero-wrap .text .btn-custom {
         font-weight: 400;
@@ -7960,7 +7978,7 @@ h1, h2, h3, h4, h5,
 
 .btn-primary {
     color: #fff;
-    background-color: #3A666D;
+    background-color: #022200;
 }
 
     .btn-primary:hover {
@@ -8190,7 +8208,7 @@ textarea.form-control {
         width: 50px;
         display: block;
         float: left;
-        background: #3A666D;
+        background: #022200;
         border-radius: 50%;
         position: relative;
     }
@@ -8529,12 +8547,15 @@ textarea.form-control {
 
 .categories, .sidelink {
   padding: 0; }
-  .categories li, .sidelink li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #dee2e6;
-    list-style: none; }
+    .categories li, .sidelink li {
+        position: relative;
+        margin: 5px;
+        padding: 6px;
+        border-bottom: 1px solid #dee2e6;
+        list-style: none;
+        text-align: center;
+        font-weight: 600;
+    }
     .categories li:last-child, .sidelink li:last-child {
       margin-bottom: 0;
       border-bottom: none;
@@ -8659,7 +8680,7 @@ textarea.form-control {
     right: 5%;
     width: 90%;
     height: 1px;
-    background-image: linear-gradient(to right, #8db986, rgb(141 185 134), #8db986);
+    background-image: linear-gradient(to right, #000000, #000000, #000000);
 }
 
 
@@ -8671,9 +8692,11 @@ textarea.form-control {
     left: calc(50% - 7px);
     width: 14px;
     height: 12px;
-    background-color: #8db986;
-    border-left: 1px solid #8db986;
-    border-right: 1px solid #8db986;
+    background-color: #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
 }
 
 /* Divider */
+
+
