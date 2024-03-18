@@ -7,7 +7,7 @@ namespace MVC_07.AppData
 		public KhizoOo() { }
 
 
-        public string ID { get; set; }
+        public string ID = "ME";
         public string FirstName = "Khizar";
         public string LastName = "Imtiaz";
         public string Age = "32 years";
@@ -17,29 +17,31 @@ namespace MVC_07.AppData
         public string ShortName = "Khizar";
         public string NickName = "KhizoOo";
 
-        public string FullBio = "";
-        public string ShortBio = "";
+        public string FullBio = "I'm a person who really enjoys learning about new and cool technologies, and I also love creating art to express emotions. You can discover this awesome mix of art and tech on my website, khizooo.com.\n\nTake a look at some beautiful art, explore my portfolio, read interesting blogs about technology, find useful bits of code, and enjoy the magic of learning through visuals.\n\nIn a world filled with lots of information, we believe that learning is more fun when it's visual. I make detailed pictures and graphics that help explain complicated ideas and make learning exciting.\n\nCome along on this journey where creativity and innovation come together!";
+        public string ShortBio = "By Luck, A Tech Guy  < - - - -  KHIZOOO  - - - - >  By Nature, An Artist";
         public string Birthdate = "1991-09-12";
         public string AddressOne = "Lahore, Pakistan";
-        public string AddressTwo = "Lahore, Pakistan";
+        public string AddressTwo = "Faisalabad, Pakistan";
         public string AddressThree = "Lahore, Pakistan";
-        public string PhoneNumberOne = "+923007683396";
-        public string PhoneNumberTwo = "+923007683396";
-        public string PhoneNumberThree = "+923007683396";
+        public string PhoneNumberOne = "+92 300 76 83 396";
+        public string PhoneNumberTwo = "+92 300 16 83 396";
+        public string PhoneNumberThree = "+92345 51 17 519";
         public string Email = "khizar.imtiaz@gmail.com";
         public string Occupation = "Tech-Savvy Artist";
         public string Nationality = "Pakistani";
+
+        public string VisitedCountries = "[{ 'Country' : 'Dubai' , 'When' : 'OCT-2022'}]";
 
         public string IsMarried = "No";
         public string BloodType = "O+";
         public string HairColor = "Grey, Golden, Brown";
         public string EyeColor = "Brown";
         public string HeightInFoot = "5.7 foot";
-        public string WeightInKg = "90 kg";
+        public string WeightInKg = "92 kg";
         public string FavoriteColor = "Black";
-        public string FavoriteFood = "Biryani";
-        public string Hobbies = "Drawing, Reading";
-        public string LanguagesSpoken = "Urddu, English";
+        public string FavoriteFood = "Biryani , Sea Food";
+        public string Hobbies = "Drawing, Reading, Self Management";
+        public string LanguagesSpoken = "Urdu, English";
         public string ReligiousBeliefs = "Islam";
         public string PoliticalViews = "Republic";
 
@@ -47,17 +49,20 @@ namespace MVC_07.AppData
         public string MyExperiences = @"[ { 'c': 'Vaival Technology', 'p': 'Project Delivery Manager', 'd': 'Software Developer to Blockchain Product Developer then Technical Team Lead and now Project Delivery Manager at Vulcan Forged.', 't': 'Mar 2017 - Present' }, { 'c': 'Jotana Tech', 'p': '.NET DEVELOPER', 'd': 'Software Developer And My Responsibility Here Is Working On .NET MVC Application Both Desktop And Web.', 't': 'Aug 2015 - Mar 2017' }, { 'c': 'Ikaroobar.com', 'p': 'WEB DEVELOPER', 'd': 'Front-End Developer And My Responsibility To Handle The Product evento.pk Which We Want To Launch In Market.', 't': 'Jan 2015 - Jun 2015' } ]";
         public string MyEducations = @"[ { 'c': 'Government College University Faisalabad', 'p': 'BSIT', 'd': 'University Degree', 't': '2010 - 2014' }, { 'c': 'Government College Faisalabad', 'p': 'Computer Science', 'd': 'College Degree', 't': '2008 - 2010' } ]";
 
+        public string Website = "https://www.khizooo.com";
+        public string Facebook  = "https://www.facebook.com/khizoooartist";
+        public string Instagram = "https://www.instagram.com/khizooo_art";
+        public string LinkedIn = "https://www.linkedin.com/in/khizar=imtiaz";
+        public string OpenSea = "https://opensea.io/KhizoOo_";
+        public string Twitter = "https://twitter.com/khizaroo";
+        public string Pinterest = "https://www.pinterest.com/KhizoOo_";
+        public string Snapchat = "https://www.snapchat.com/add/khizooo_1163?share_id=ZIvI4JY3joU&locale=en-PK";
+        public string Skype = "https://join.skype.com/invite/b0k5jlb9HRmk";
+        public string YouTube = "https://youtube.com/@khizooo?sub_confirmation=1";
+        public string Whatsapp = "https://wa.me/923007683396?text=KhizoOo%20%3C3";
+        public string TikTok = "https://www.tiktok.com/@khizooo_butt";
 
-        public string Facebook { get; set; }
-        public string Instagram { get; set; }
-        public string LinkedIn { get; set; }
-        public string OpenSea { get; set; }
-        public string Skype = "khizar.imtiaz";
-        public string Snapchat { get; set; }
-        public string TikTok { get; set; }
-        public string Twitter { get; set; }
-        public string YouTube { get; set; }
-        public string Pinterest { get; set; }
+
 
         #region COMMON METHODS
 

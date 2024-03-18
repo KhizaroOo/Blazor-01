@@ -127,8 +127,15 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <script src="~/js/scrollax.min.js"></script>
     <script src="~/js/main.js"></script>
 
+    <script>
+            function SetAside(ID) {
+                $("#khizooo-main-menu li").removeClass("khizooo-active");
+                $("#khizooo-main-menu #" + ID).addClass("khizooo-active");
+            }
+    ;</script>
+
     <!-- Scripts -->
-    @await RenderSectionAsync("CustomScripts", required: false)
+    @await RenderSectionAsync("JS_Scripts", required: false)
 </body>
 </html>
 

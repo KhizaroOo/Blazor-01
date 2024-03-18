@@ -7289,15 +7289,17 @@ body {
   body.offcanvas {
     overflow-x: hidden; }
     body.offcanvas #khizooo-aside {
-      -moz-transform: translateX(0);
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -o-transform: translateX(0);
-      transform: translateX(0);
-      width: 270px;
-      background: #fff;
-      z-index: 999;
-      position: fixed; }
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        width: 270px;
+        background: #fff;
+        z-index: 999;
+        position: fixed;
+        padding: 25px;
+    }
     body.offcanvas #khizooo-main, body.offcanvas .khizooo-nav-toggle {
       top: 0;
       -moz-transform: translateX(270px);
@@ -7368,7 +7370,10 @@ h1, h2, h3, h4, h5,
 }
   @media (min-width: 992px) {
     #khizooo-aside {
-      width: 18%; } }
+        width: 15%;
+        padding: 20px;
+    } }
+
   @media (max-width: 991.98px) {
     #khizooo-aside {
       width: 270px;
@@ -7500,7 +7505,8 @@ h1, h2, h3, h4, h5,
 }
   @media (min-width: 992px) {
     #khizooo-main {
-      width: 82%; } }
+        width: 85%;
+    } }
 
 .khizooo-nav-toggle {
   cursor: pointer;
@@ -7584,19 +7590,19 @@ h1, h2, h3, h4, h5,
   transform: rotateZ(-45deg); }
 
 .khizooo-nav-toggle {
-  position: fixed;
-  left: -12px;
-  top: 0px;
-  z-index: 9999;
-  cursor: pointer;
-  opacity: 1;
-  visibility: hidden;
-  padding: 20px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+    position: absolute;
+    left: -51px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 1;
+    visibility: hidden;
+    padding: 3px;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
   @media (max-width: 991.98px) {
     .khizooo-nav-toggle {
       opacity: 1;

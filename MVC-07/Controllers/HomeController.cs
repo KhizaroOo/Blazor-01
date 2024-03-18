@@ -5,7 +5,7 @@ using MVC_07.Models;
 
 namespace MVC_07.Controllers;
 
-public class HomeController : Controller
+public class HomeController : BaseController
 {
     private readonly ILogger<HomeController> _logger;
 
@@ -41,6 +41,7 @@ public class HomeController : Controller
 
         #endregion
 
+        ViewBag.ME = ME;
         ViewBag.MyAllArts = MyAllArts;
         ViewBag.MyAllInfographics = MyAllInfographics;
         ViewBag.MyAllWritings = MyAllWritings;

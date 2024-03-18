@@ -3,15 +3,12 @@
     ViewData["Title"] = "Index";
 }
 
-<!-- Landing Page -->
-<partial data-name="LandingPage" name="~/Views/Shared/PartialViews/LP.cshtml" />
-<!-- Landing Page -->
 <!-- ArtFulness -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Art Fulness</h2>
+                <h2 class="mb-4 Heading-Color">Art Fulness</h2>
                 <p class="subheading">"Discover the soulful strokes of creativity"</p>
             </div>
         </div>
@@ -36,133 +33,16 @@
             </div>
         </div>
 
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Arts <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
 </section>
 <!-- ArtFulness -->
 
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
-
-<!-- Inforfgraphics -->
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Info Graphics</h2>
-                <p>"Level up your learning with powerful tech-infused infographics – visuals beat text!"</p>
-            </div>
-        </div>
-        <div class="photograhy">
-            <div class="row no-gutters">
-
-                @{
-                    foreach (var ig in ViewBag.MyAllInfoGraphics)
-                    {
-                        <div class="col-md-2">
-                            <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@ig.IMG);">
-                                <div class="overlay"></div>
-                                <div class="text text-center" style="position: absolute;bottom: 10px;">
-                                    @*<h3>@Html.Raw(ig.Title)</h3>*@
-                                    <span style="font-size:9px;">@ig.Type - @ig.Category</span>
-                                </div>
-                            </a>
-                        </div>
-                    }
-                }
-
-            </div>
-        </div>
-
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Inforfgraphics <span class="ion-ios-arrow-forward"></span></a></p>
-    </div>
-</section>
-<!-- Inforfgraphics -->
-
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
-
-<!-- Writings -->
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Writings</h2>
-                <p>"Dive into insightful writing wonders"</p>
-            </div>
-        </div>
-        <div class="row justify-content-center"">
-
-            <div class="col-md-12 text-center p-5">
-                <p style="margin-bottom: 0;"> Coming Soon !!!</p>
-            </div>
 
 
-            @*<div class="col-lg-12">
-                <div class="row">
-
-                    @{
-                        foreach (var w in ViewBag.MyAllWritings)
-                        {
-                            <div class="col-md-4">
-                                <div class="blog-entry ftco-animate fadeInUp ftco-animated">
-                                    <a href="#" class="img img-2" style="background-image: url(@w.IMG);"></a>
-                                    <div class="text text-2 pt-2 mt-3">
-                                        <span class="category mb-3 d-block"><a href="#">@w.Type - @w.Category</a></span>
-                                        <h3 class="mb-4"><a href="#">@Html.Raw(w.Title)</a></h3>
-                                        <p class="mb-4">@w.ShortDesription</p>
-
-                                        <div class="meta-wrap align-items-end" style="text-align:right">
-
-                                            <a href="#" class="btn py-2" style="padding-right:0">Continue Reading <span class="ion-ios-arrow-forward"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    }
-
-                </div>
-            </div>*@
-
-
-        </div>
-        @*<p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Writings <span class="ion-ios-arrow-forward"></span></a></p>*@
-    </div>
-</section>
-<!-- Writings -->
-
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
-
-<!-- ToolBoxes -->
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Tools Box</h2>
-                <p>"Innovate development with my custom solution"</p>
-            </div>
-        </div>
-        <div class="photograhy">
-            <div class="row no-gutters">
-
-                @{
-                    foreach (var tb in ViewBag.MyAllToolBoxes)
-                    {
-                        <div class="col-md-2">
-                            <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@tb.IMG);">
-                                <div class="overlay"></div>
-                                <div class="text text-center" style="position: absolute;bottom: 10px;">
-                                    @*<h3>@Html.Raw(tb.Title)</h3>*@
-                                    <span>@tb.Type - @tb.Category</span>
-                                </div>
-                            </a>
-                        </div>
-                    }
-                }
-
-            </div>
-        </div>
-
-        <p style="margin-top: 20px;text-align: center;"><a href="#" class="btn btn-primary py-3 px-5">See All of My Tools <span class="ion-ios-arrow-forward"></span></a></p>
-    </div>
-</section>
-<!-- ToolBoxes -->
+@section JS_Scripts {
+    <script>
+        (function ($) {
+                SetAside("Menu-Artfulness");
+        })(jQuery);
+    </script>
+}

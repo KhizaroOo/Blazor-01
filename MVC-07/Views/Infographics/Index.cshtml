@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Inforfgraphics -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mb-4 Heading-Color">Info Graphics</h2>
+                    <p>"Level up your learning with powerful tech-infused infographics – visuals beat text!"</p>
+</div>
+        </div>
+        <div class="photograhy">
+            <div class="row no-gutters">
+
+                @{
+                    foreach (var ig in ViewBag.MyAllInfoGraphics)
+                    {
+                        <div class="col-md-2">
+                            <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@ig.IMG);">
+                                <div class="overlay"></div>
+                                <div class="text text-center" style="position: absolute;bottom: 10px;">
+                                    @*<h3>@Html.Raw(ig.Title)</h3>*@
+                                    <span style="font-size:9px;">@ig.Type - @ig.Category</span>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Inforfgraphics -->
+
+
+@section JS_Scripts {
+    <script>SetAside("Menu-InfoGraphics");</script>
+}

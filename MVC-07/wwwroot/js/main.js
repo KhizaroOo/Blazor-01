@@ -16,7 +16,6 @@
     scrollProperty: 'scroll'
   });
 
-
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -163,7 +162,7 @@
     }
   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
@@ -172,9 +171,6 @@
 
     fixedContentPos: false
   });
-
-
-
 
 })(jQuery);
 
