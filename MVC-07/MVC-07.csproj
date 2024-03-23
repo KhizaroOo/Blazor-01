@@ -15,6 +15,7 @@
     <Content Remove="wwwroot\js\" />
     <Content Remove="wwwroot\scss\" />
     <Content Remove="wwwroot\images\MyToolBoxes\" />
+    <Content Remove="wwwroot\images\SEO\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
@@ -23,6 +24,7 @@
     <Folder Include="wwwroot\scss\" />
     <Folder Include="Views\Shared\PartialViews\" />
     <Folder Include="wwwroot\images\MyToolBoxes\" />
+    <Folder Include="wwwroot\images\SEO\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Shared\PartialViews\" />

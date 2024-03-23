@@ -13,12 +13,12 @@ namespace MVC_07.Controllers
     public class ArtfulnessController : BaseController
     {
 
-        private readonly ILogger<ArtfulnessController> _Logger;
         private readonly IConfiguration _Configuration;
+        private readonly ILogger<ArtfulnessController> _logger;
 
-        public ArtfulnessController(ILogger<ArtfulnessController> logger, IConfiguration configuration)
+        public ArtfulnessController(ILogger<ArtfulnessController> logger, IConfiguration configuration, IDistributedCache cache) : base(cache, configuration)
         {
-            _Logger = logger;
+            _logger = logger;
             _Configuration = configuration;
         }
 

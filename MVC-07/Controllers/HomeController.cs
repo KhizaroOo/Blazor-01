@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Configuration;
 using MVC_07.AppData;
 using MVC_07.Models;
 
@@ -7,11 +9,14 @@ namespace MVC_07.Controllers;
 
 public class HomeController : BaseController
 {
+
+    private readonly IConfiguration _Configuration;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger , IConfiguration configuration, IDistributedCache cache) : base(cache, configuration)
     {
         _logger = logger;
+        _Configuration = configuration;
     }
 
     public IActionResult Index()

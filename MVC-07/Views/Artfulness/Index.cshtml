@@ -1,6 +1,24 @@
 ﻿
-@{
-    ViewData["Title"] = "Index";
+@section MetaTags {
+
+    <title>Drawing & Sketching Gallery - KhizoOo</title>
+    <meta name="description" content="Explore Khizar Imtiaz's gallery of drawings and sketches. Dive into a world of creativity through pencil, charcoal, and digital sketches.">
+    <meta name="keywords" content="khizooo, Drawing Gallery, Sketching Art, Pencil Drawing, Charcoal Sketches, Digital Drawing, Art Portfolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.khizooo.com/Artfulness">
+    <meta property="og:title" content="Khizar Imtiaz - Drawing & Sketching Gallery">
+    <meta property="og:description" content="Explore Khizar Imtiaz's gallery of drawings and sketches. Dive into a world of creativity through pencil, charcoal, and digital sketches.">
+    <meta property="og:image" content="~/images/SEO/OG-Image.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="~/images/SEO/Twitter-Card.png">
+    <meta property="twitter:url" content="http://www.khizooo.com/Artfulness">
+    <meta property="twitter:title" content="Khizar Imtiaz - Drawing & Sketching Gallery">
+    <meta property="twitter:description" content="Explore Khizar Imtiaz's gallery of drawings and sketches. Dive into a world of creativity through pencil, charcoal, and digital sketches.">
+    <meta property="twitter:image" content="~/images/SEO/Twitter-Image.png">
+
 }
 
 <!-- ArtFulness -->
@@ -40,9 +58,7 @@
 
 
 @section JS_Scripts {
-    <script>
-        (function ($) {
-                SetAside("Menu-Artfulness");
-        })(jQuery);
-    </script>
+    <script>(function ($) {
+            SetAside("Menu-Artfulness");
+        })(jQuery);</script>
 }

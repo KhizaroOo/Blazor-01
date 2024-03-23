@@ -7315,6 +7315,7 @@ a {
     color: #D9045C;
     font-weight: bolder;
 }
+
     a:hover, a:focus {
         text-decoration: none;
         color: #3a666d;
@@ -8704,5 +8705,3 @@ textarea.form-control {
 }
 
 /* Divider */
-
-

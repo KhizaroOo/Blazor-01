@@ -1,4 +1,10 @@
-﻿<div class="hero-wrap js-fullheight" style="background-image: url(images/Theme/bg_11.jpg);" data-stellar-background-ratio="0.5">
+﻿@{
+
+    MVC_07.AppData.KhizoOo ME = ViewBag.ME;
+
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url(images/Theme/bg_11.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay "></div>
     <div class="js-fullheight d-flex justify-content-center align-items-center">
         <div class="col-md-8 text text-center">
@@ -13,9 +19,12 @@
                 <p class="mb-4">Come along on this journey where creativity and innovation come together!</p>
 
                 <ul class="ftco-social mt-3">
-                    <li class="ftco-animate fadeInUp ftco-animated"><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li class="ftco-animate fadeInUp ftco-animated"><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate fadeInUp ftco-animated"><a href="#"><span class="icon-instagram"></span></a></li>
+
+                    <li class="ftco-animate fadeInUp ftco-animated"><a href="@ME.Facebook"><span class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate fadeInUp ftco-animated"><a href="@ME.Twitter"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate fadeInUp ftco-animated"><a href="@ME.Instagram"><span class="icon-instagram"></span></a></li>
+                    <li class="ftco-animate fadeInUp ftco-animated"><a href="@ME.LinkedIn"><span class="icon-linkedin"></span></a></li>
+
                 </ul>
 
             </div>

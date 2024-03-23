@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using MVC_07.AppData;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +13,15 @@ namespace MVC_07.Controllers
 {
     public class ToolsBoxController : BaseController
     {
+
+        private readonly IConfiguration _Configuration;
+        private readonly ILogger<ToolsBoxController> _logger;
+
+        public ToolsBoxController(ILogger<ToolsBoxController> logger, IConfiguration configuration, IDistributedCache cache) : base(cache, configuration)
+        {
+            _logger = logger;
+            _Configuration = configuration;
+        }
 
         #region Listing
 

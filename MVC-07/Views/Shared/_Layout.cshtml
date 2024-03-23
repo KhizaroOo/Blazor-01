@@ -37,9 +37,10 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <!-- Common META -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="KhizoOo">
+    <link rel="canonical" href="https://www.khizooo.com" />
     <meta name="KhizoOo-Theme" content="KhizoOo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
@@ -47,13 +48,16 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <meta name="rating" content="general">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
-
-    <!-- Title -->
-    <title>khizooo.com</title>
-
+    <!-- Common META -->
     <!-- Favicon -->
     <link title="Favicon" rel="icon" type="image/png" href="favicons/Favicon-16.png">
-
+    <!-- Favicon -->
+    <!-- Title -->
+    <title>Khizar Imtiaz - Art & Tech Fusion</title>
+    <!-- Title -->
+    <!-- MetaTags -->
+    @RenderSection("MetaTags", required: true)
+    <!-- MetaTags -->
     <!-- Template Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
@@ -130,7 +134,7 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <script>
             function SetAside(ID) {
                 $("#khizooo-main-menu li").removeClass("khizooo-active");
-                $("#khizooo-main-menu #" + ID).addClass("khizooo-active");
+                $("." + ID).addClass("khizooo-active");
             }
     ;</script>
 
