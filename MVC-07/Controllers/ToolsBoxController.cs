@@ -55,6 +55,18 @@ namespace MVC_07.Controllers
 
         #endregion
 
+        #region Line Generator
+
+        public IActionResult Line_Generator()
+        {
+
+            ViewBag.ME = ME;
+
+            return View();
+        }
+
+        #endregion
+
     }
 }
 
