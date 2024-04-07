@@ -57,7 +57,7 @@ namespace MVC_07.Controllers
 
         #region Line Generator
 
-        public IActionResult Line_Generator()
+        public IActionResult PatternEnigma()
         {
 
             ViewBag.ME = ME;
