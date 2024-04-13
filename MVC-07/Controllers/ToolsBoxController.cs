@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.FileSystemGlobbing.Internal;
 using MVC_07.AppData;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -60,6 +61,14 @@ namespace MVC_07.Controllers
         public IActionResult PatternEnigma()
         {
 
+            #region Basic Patterns
+
+            List<BasicPattern> BasicPatterns = new MyToolBoxes().GetBasicPatterns(50);
+
+            #endregion
+
+
+            ViewBag.BasicPatterns = BasicPatterns;
             ViewBag.ME = ME;
 
             return View();
