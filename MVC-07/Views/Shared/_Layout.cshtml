@@ -34,7 +34,6 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <meta name="Whatsapp" content="https://wa.me/923007683396?text=KhizoOo%20%3C3">
     <meta name="TikTok" content="https://www.tiktok.com/@@khizooo_butt">
     <!-- My Social META -->
-
     <!-- Common META -->
     <meta charset="utf-8" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
@@ -50,7 +49,6 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
     <!-- Common META -->
-
     <!-- Favicon -->
     <link title="Favicon" rel="icon" type="image/png" href="favicons/Favicon-16.png">
     <!-- Favicon -->
@@ -60,51 +58,43 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
     <!-- MetaTags -->
     @RenderSection("MetaTags", required: true)
     <!-- MetaTags -->
-    <!-- Template Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
-    <!-- Template CSS Files -->
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/animate.css">
-    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="~/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/css/aos.css">
-    <link rel="stylesheet" href="~/css/ionicons.min.css">
-    <link rel="stylesheet" href="~/css/flaticon.css">
-    <link rel="stylesheet" href="~/css/icomoon.css">
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- STYLE CSS -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link href="~/assets/css/plugins.css" rel="stylesheet">
+
+    <!--- FONT-ICONS CSS -->
+    <link href="~/assets/css/icons.css" rel="stylesheet">
+
+    <!-- INTERNAL Switcher css -->
+    <link href="~/assets/switcher/css/switcher.css" rel="stylesheet">
+    <link href="~/assets/switcher/demo.css" rel="stylesheet">
 
     <!-- Custom Styles CSS -->
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
 
 </head>
-<body>
 
+<body class="app sidebar-mini ltr light-mode">
 
-    <div id="khizooo-page">
-
-        <a href="#" class="js-khizooo-nav-toggle khizooo-nav-toggle"><i></i></a>
-
-        <!-- Left Sidebar -->
-        <partial data-name="SideFilter" name="~/Views/Shared/PartialViews/Aside.cshtml" />
-        <!-- Left Sidebar -->
-        <!-- Main -->
-        <div id="khizooo-main">
-
-            @RenderBody()
-
-            <!-- Footer -->
-            <partial data-name="Footer" name="~/Views/Shared/PartialViews/Footer.cshtml" />
-            <!-- Footer -->
-        </div>
-        <!-- Main -->
+    <!-- GLOBAL-LOADER -->
+    <div id="global-loader">
+        <img src="~/assets/images/loader.svg" class="loader-img" alt="Loader">
     </div>
-    <!-- Main -->
-    <!-- Loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
-    <!-- Loader -->
+    <!-- /GLOBAL-LOADER -->
+    <!-- PAGE -->
+    <div id="khizooo-page" class="page">
+        @RenderBody()
+    </div>
+    <!-- PAGE -->
+    <!-- BACK-TO-TOP -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
     <!-- Scripts -->
     @{
 
@@ -118,30 +108,53 @@ TikTok      https://www.tiktok.com/@@khizooo_butt
 
     }
 
+    <!-- JQUERY JS -->
+    <script src="~/assets/js/jquery.min.js"></script>
 
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="~/js/popper.min.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/jquery.waypoints.min.js"></script>
-    <script src="~/js/jquery.stellar.min.js"></script>
-    <script src="~/js/owl.carousel.min.js"></script>
-    <script src="~/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/js/aos.js"></script>
-    <script src="~/js/jquery.animateNumber.min.js"></script>
-    <script src="~/js/scrollax.min.js"></script>
-    <script src="~/js/main.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="~/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-    <script>
-            function SetAside(ID) {
+    <!-- TypeHead js -->
+    <script src="~/assets/plugins/bootstrap5-typehead/autocomplete.js"></script>
+    <script src="~/assets/js/typehead.js"></script>
+
+    <!-- Perfect SCROLLBAR JS-->
+    <script src="~/assets/plugins/p-scroll/perfect-scrollbar.js"></script>
+    <script src="~/assets/plugins/p-scroll/pscroll.js"></script>
+    <script src="~/assets/plugins/p-scroll/pscroll-1.js"></script>
+
+    <!-- SIDE-MENU JS -->
+    <script src="~/assets/plugins/sidemenu/sidemenu.js"></script>
+
+    <!-- SIDEBAR JS -->
+    <script src="~/assets/plugins/sidebar/sidebar.js"></script>
+
+    <!-- Color Theme js -->
+    <script src="~/assets/js/themeColors.js"></script>
+
+    <!-- Sticky js -->
+    <script src="~/assets/js/sticky.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="~/assets/js/custom.js"></script>
+
+    <!-- Custom-switcher -->
+    <script src="~/assets/js/custom-swicher.js"></script>
+
+    <!-- Switcher js -->
+    <script src="~/assets/switcher/js/switcher.js"></script>
+
+    <script>function SetAside(ID) {
                 $("#khizooo-main-menu li").removeClass("khizooo-active");
                 $("." + ID).addClass("khizooo-active");
-            }
-    ;</script>
+            };</script>
 
     <!-- Scripts -->
+
     @await RenderSectionAsync("JS_Scripts", required: false)
+
 </body>
+
 </html>
 

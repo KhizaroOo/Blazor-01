@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
 
 
 
@@ -7,18 +6,15 @@
 
 @section MetaTags {
 
-    <!-- Website Meta Tags -->
     <meta name="description" content="Discover the fusion of art and technology with Khizar Imtiaz. Explore a portfolio of beautiful art, insightful tech blogs, and creative coding projects.">
     <meta name="keywords" content="Khizooo, Art and Technology, Tech Blog, Coding Projects, Learn through Visuals, Creative Portfolio">
-
-    <!-- Open Graph / Facebook Meta Tags -->
+    Open Graph / Facebook Meta Tags
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.khizooo.com/">
     <meta property="og:title" content="Khizar Imtiaz - Art & Tech Fusion">
     <meta property="og:description" content="Discover the fusion of art and technology with Khizar Imtiaz. Explore a portfolio of beautiful art, insightful tech blogs, and creative coding projects.">
     <meta property="og:image" content="~/images/SEO/OG-Image.png">
-
-    <!-- Twitter Meta Tags -->
+    Twitter Meta Tags
     <meta property="twitter:card" content="~/images/SEO/Twitter-Card.png">
     <meta property="twitter:url" content="https://www.khizooo.com/">
     <meta property="twitter:title" content="Khizar Imtiaz - Art & Tech Fusion">
@@ -27,84 +23,131 @@
 
 }
 
-<!-- Landing Page -->
-<partial data-name="LandingPage" name="~/Views/Shared/PartialViews/LP.cshtml" />
-<!-- Landing Page -->
-<!-- ArtFulness -->
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4 Heading-Color">Art Fulness</h2>
-                <p class="subheading">"Discover the soulful strokes of creativity"</p>
+
+<div class="page-main">
+
+    <!-- Header & Sidebar -->
+    <partial data-name="Header-Siderbar" name="~/Views/Shared/PartialViews/Header-Sidebar.cshtml" />
+    <!-- Header & Sidebar -->
+    <!-- App Content -->
+    <div class="main-content app-content mt-0">
+        <div class="side-app">
+
+            <!-- CONTAINER -->
+            <div class="main-container container-fluid">
+
+                <!-- PAGE-HEADER -->
+                <div class="page-header">
+                    <h1 class="page-title">Empty</h1>
+                    <div>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Empty</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- PAGE-HEADER END -->
+                <!-- ROW-1 OPEN -->
+                <!-- Row -->
+                <div class="row ">
+                    <div class="col-md-12">
+                    </div>
+                </div>
+                <!-- /Row -->
             </div>
+            <!-- CONTAINER CLOSED -->
         </div>
-        <div class="photograhy">
-            <div class="row no-gutters">
-
-                @{
-                    foreach (var art in ViewBag.MyAllArts)
-                    {
-                        <div class="col-md-2">
-                            <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(@art.IMG);">
-                                <div class="overlay"></div>
-                                <div class="text text-center">
-                                    <h3>@Html.Raw(art.Title)</h3>
-                                    <span>@art.Type - @art.Category</span>
-                                </div>
-                            </a>
-                        </div>
-                    }
-                }
-
-            </div>
-        </div>
-
-        <p style="margin-top: 20px;text-align: center;"><a href="/Artfulness" class="btn btn-primary py-3 px-5">See All of My Arts <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
-</section>
-<!-- ArtFulness -->
+    <!-- App Content -->
 
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
+</div>
 
-<!-- Inforfgraphics -->
-<section class="ftco-section">
+<!-- FOOTER -->
+<footer class="footer">
     <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4 Heading-Color">Info Graphics</h2>
-                <p>"Level up your learning with powerful tech-infused infographics – visuals beat text!"</p>
+        <div class="row align-items-center flex-row-reverse">
+            <div class="col-md-12 col-sm-12 text-center">
+                Copyright © <span id="year"></span> <a href="javascript:void(0)">Sash</a>. Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0)"> Spruko </a> All rights reserved.
             </div>
         </div>
-        <div class="photograhy">
-            <div class="row no-gutters">
-
-                @{
-                    foreach (var ig in ViewBag.MyAllInfoGraphics)
-                    {
-                        <div class="col-md-2">
-                            <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@ig.IMG);">
-                                <div class="overlay"></div>
-                                <div class="text text-center" style="position: absolute;bottom: 10px;">
-                                    @*<h3>@Html.Raw(ig.Title)</h3>*@
-                                    <span style="font-size:9px;">@ig.Type - @ig.Category</span>
-                                </div>
-                            </a>
-                        </div>
-                    }
-                }
-
-            </div>
-        </div>
-
-        <p style="margin-top: 20px;text-align: center;"><a href="/InfoGraphics" class="btn btn-primary py-3 px-5">See All of My Inforfgraphics <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
-</section>
-<!-- Inforfgraphics -->
+</footer>
+<!-- FOOTER -->
 
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
 
-<!-- Writings -->
+
+
+
+@*
+    <partial data-name="LandingPage" name="~/Views/Shared/PartialViews/LP.cshtml" />
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2 class="mb-4 Heading-Color">Art Fulness</h2>
+                    <p class="subheading">"Discover the soulful strokes of creativity"</p>
+                </div>
+            </div>
+            <div class="photograhy">
+                <div class="row no-gutters">
+
+                    @{
+                        foreach (var art in ViewBag.MyAllArts)
+                        {
+                            <div class="col-md-2">
+                                <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(@art.IMG);">
+                                    <div class="overlay"></div>
+                                    <div class="text text-center">
+                                        <h3>@Html.Raw(art.Title)</h3>
+                                        <span>@art.Type - @art.Category</span>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;text-align: center;"><a href="/Artfulness" class="btn btn-primary py-3 px-5">See All of My Arts <span class="ion-ios-arrow-forward"></span></a></p>
+        </div>
+    </section>
+    <!-- ArtFulness -->
+    <!-- Inforfgraphics -->
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2 class="mb-4 Heading-Color">Info Graphics</h2>
+                    <p>"Level up your learning with powerful tech-infused infographics – visuals beat text!"</p>
+                </div>
+            </div>
+            <div class="photograhy">
+                <div class="row no-gutters">
+
+                    @{
+                        foreach (var ig in ViewBag.MyAllInfoGraphics)
+                        {
+                            <div class="col-md-2">
+                                <a href="#" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@ig.IMG);">
+                                    <div class="overlay"></div>
+                                    <div class="text text-center" style="position: absolute;bottom: 10px;">-->
+                                            <h3>@Html.Raw(ig.Title)</h3>
+<span style="font-size:9px;">@ig.Type - @ig.Category</span>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+
+<p style="margin-top: 20px;text-align: center;"><a href="/InfoGraphics" class="btn btn-primary py-3 px-5">See All of My Inforfgraphics <span class="ion-ios-arrow-forward"></span></a></p>
+        </div>
+    </section>-->
+
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -114,47 +157,41 @@
             </div>
         </div>
         <div class="row justify-content-center">
-
             <!-- Coming Soon -->
             <partial data-name="ComingSoon-LP" name="~/Views/Shared/PartialViews/ComingSoon-LP.cshtml" />
             <!-- Coming Soon -->
-            @*<div class="col-lg-12">
-                    <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
 
-                        @{
-                            foreach (var w in ViewBag.MyAllWritings)
-                            {
-                                <div class="col-md-4">
-                                    <div class="blog-entry ftco-animate fadeInUp ftco-animated">
-                                        <a href="#" class="img img-2" style="background-image: url(@w.IMG);"></a>
-                                        <div class="text text-2 pt-2 mt-3">
-                                            <span class="category mb-3 d-block"><a href="#">@w.Type - @w.Category</a></span>
-                                            <h3 class="mb-4"><a href="#">@Html.Raw(w.Title)</a></h3>
-                                            <p class="mb-4">@w.ShortDesription</p>
+                    @{
+                        foreach (var w in ViewBag.MyAllWritings)
+                        {
+                            <div class="col-md-4">
+                                <div class="blog-entry ftco-animate fadeInUp ftco-animated">
+                                    <a href="#" class="img img-2" style="background-image: url(@w.IMG);"></a>
+                                    <div class="text text-2 pt-2 mt-3">
+                                        <span class="category mb-3 d-block"><a href="#">@w.Type - @w.Category</a></span>
+                                        <h3 class="mb-4"><a href="#">@Html.Raw(w.Title)</a></h3>
+                                        <p class="mb-4">@w.ShortDesription</p>
 
-                                            <div class="meta-wrap align-items-end" style="text-align:right">
+                                        <div class="meta-wrap align-items-end" style="text-align:right">
 
-                                                <a href="#" class="btn py-2" style="padding-right:0">Continue Reading <span class="ion-ios-arrow-forward"></span></a>
-                                            </div>
+                                            <a href="#" class="btn py-2" style="padding-right:0">Continue Reading <span class="ion-ios-arrow-forward"></span></a>
                                         </div>
                                     </div>
                                 </div>
-                            }
+                            </div>
                         }
+                    }
 
-                    </div>
-                </div>*@
+                </div>
+            </div>
 
 
         </div>
-        @*<p style="margin-top: 20px;text-align: center;"><a href="/Writings" class="btn btn-primary py-3 px-5">See All of My Writings <span class="ion-ios-arrow-forward"></span></a></p>*@
     </div>
 </section>
-<!-- Writings -->
 
-<div class="Web-Divider Web-Divider-transparent Web-Divider-stopper"></div>
-
-<!-- ToolBoxes -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -173,7 +210,7 @@
                             <a href="@tb.SITE_URL" class="infographich-entry img d-flex justify-content-center align-items-center" style="background-image: url(@tb.IMG);">
                                 <div class="overlay"></div>
                                 <div class="text text-center" style="position: absolute;bottom: 10px;">
-                                    @*<h3>@Html.Raw(tb.Title)</h3>*@
+                                    @*<h3>@Html.Raw(tb.Title)</h3>
                                     <span>@tb.Type - @tb.Category</span>
                                 </div>
                             </a>
@@ -187,4 +224,5 @@
         <p style="margin-top: 20px;text-align: center;"><a href="/ToolsBox" class="btn btn-primary py-3 px-5">See All of My Tools <span class="ion-ios-arrow-forward"></span></a></p>
     </div>
 </section>
-<!-- ToolBoxes -->
+
+*@
