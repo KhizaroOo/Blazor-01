@@ -3,7 +3,7 @@
 
     let stickyElement = $(".sticky"),
      stickyClass = "sticky-pin",
-     stickyPos = 66, //Distance from the top of the window.
+     stickyPos = 40, //Distance from the top of the window.
      stickyHeight;
 
 

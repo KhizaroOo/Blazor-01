@@ -29,3 +29,53 @@
 .Wording-Background {
     background-color: #8928EC;
 }
+
+
+
+.lp-compare {
+    display: grid;
+}
+
+    .lp-compare > * {
+        grid-area: 1 / 1;
+    }
+
+    .lp-compare > section {
+        display: grid;
+        place-content: center;
+    }
+
+    .lp-compare .before {
+        mask: linear-gradient(to right, #000 0, var(--pos, 50%), #0000 0);
+    }
+
+    .lp-compare .after {
+        mask: linear-gradient(to right, #0000 0, var(--pos, 50%), #000 0);
+    }
+
+    .lp-compare > input[type="range"] {
+        z-index: 1;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+        .lp-compare > input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            inline-size: 4px;
+            block-size: 100dvh;
+            background-color: CanvasText;
+        }
+
+        .lp-compare > input[type="range"]::-moz-range-thumb {
+            appearance: none;
+            inline-size: 4px;
+            block-size: 100dvh;
+            background-color: CanvasText;
+        }
+
+.lp-compare-img {
+    max-block-size: 80dvh;
+    max-inline-size: 100%;
+}
