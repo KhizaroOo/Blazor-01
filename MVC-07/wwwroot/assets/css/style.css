@@ -1,98 +1,10 @@
 @charset "UTF-8";
-/*------------------------------------------------------------------
-[Master Stylesheet]
 
-Project        :   sash – Bootstrap 5  Admin & Dashboard Template
-Copyright      :   Spruko Technologies Private Limited 
-Author         :   Spruko
-Author URL     :   https://themeforest.net/user/spruko
-Support	       :   support@spruko.com
-License        :   Licensed under ThemeForest License
-
--------------------------------------------------------------------*/
-/*
---- bootstrap-styles
---- accordion
---- alert
---- avatars
---- badges
---- blackquote
---- breadcrumb
---- button
---- buttons
---- cards
---- carousel
---- dropdown
---- forms
---- grid
---- input-group
---- modal
---- navigation
---- pagination
---- panel
---- popover
---- progress
---- tables
---- tags
---- thumbnail
---- tooltip
---- components-col
---- custom-forms
---- custom-styles
---- file-manager
---- font
---- gallery
---- highlight
---- labels
---- landing
---- list-group
---- media
---- navbar
---- pricing
---- rating
---- tabs-menu
---- timeline
---- footer
---- header
---- horizontal-menu
---- icons-list
---- loaders
---- rtl
---- datepicker
---- jvector
---- select2
---- select-group
---- default-menu
---- sidemenu-icontext
---- closed-menu
---- hover-submenu
---- hover-submenu-style1
---- calender
---- chart
---- chat
---- error-pages
---- range
---- ribbon
---- form-wizard
---- widgets
---- alignments
---- background
---- border
---- display
---- float-elements
---- height
---- margin
---- padding
---- position
---- typography
---- width
-*/
-/* ######## FONT ######## */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
 
 /* ######## BOOTSTRAP ######## */
 :root {
-    --primary-rgb: 108, 95, 252;
+    --primary-rgb: 0, 0, 0;
     --primary-bg-color: rgb(var(--primary-rgb));
     --primary-bg-hover: rgb(var(--primary-rgb), 0.9);
     --primary-bg-border: rgb(var(--primary-rgb));
@@ -15211,6 +15123,7 @@ small,
 
     .app-content .side-app {
         padding: 0px 15px 0 15px !important;
+        margin: 1.5rem 0rem 1.5rem;
     }
 
     .header .header-right-icons .nav-link.icon {
@@ -23535,6 +23448,7 @@ ul.timeline>li:before {
 
 @media (min-width: 768px) {
     .app-content .side-app {
+        margin: 1.5rem 0rem 1.5rem;
         padding-block-start: 0px !important;
     }
 }
@@ -24261,7 +24175,7 @@ ul.timeline>li:before {
     }
 
     .horizontal .app-sidebar {
-        width: 270px;
+        width: 150px;
     }
 }
 
@@ -29541,17 +29455,17 @@ div.conv-form-wrapper div#messages div.message.from {
 
 .dark-mode .side-menu__item:hover,
 .dark-mode .side-menu__item:focus {
-    color: var(--primary-bg-color);
+    color: var(--primary-bg-color) !important;
 }
 
 .dark-mode.dark-menu .side-menu__item.active .side-menu__icon,
 .dark-mode.dark-menu .side-menu__item:hover .side-menu__icon,
 .dark-mode.dark-menu .side-menu__item:focus .side-menu__icon {
-    color: var(--primary-bg-color);
+    color: var(--primary-bg-color) !important;
 }
 
 .dark-mode .footer a:not(.btn) {
-    color: var(--primary-bg-color);
+    color: var(--primary-bg-color) !important;
 }
 
 .dark-mode .text-primary {
@@ -51570,7 +51484,7 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
     }
 
     .side-header {
-        width: 270px;
+        width: 150px;
         inset-inline-start: 0;
         inset-inline-end: 0;
         inset-block-start: 0;
@@ -51657,7 +51571,7 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
 
 @media (min-width: 992px) {
     .app-content {
-        margin-inline-start: 270px;
+        margin-inline-start: 140px;
     }
 }
 
@@ -51693,7 +51607,7 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
 @media (min-width: 992px) {
     .app-header {
         padding-inline-end: 10px;
-        padding-inline-start: 285px;
+        padding-inline-start: 155px;
         z-index: 9 !important;
     }
 }
@@ -51801,14 +51715,15 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 400;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
     -webkit-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
     -o-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
     transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
     color: #282f53;
-    margin: 2px 0px;
+    margin: 15px 0px;
     white-space: nowrap;
 }
 
@@ -52023,7 +51938,7 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
     }
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled-open .app-sidebar {
-        width: 270px;
+        width: 150px;
     }
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled-open .side-header {
@@ -52381,7 +52296,7 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
 }
 
 .sidebar-mini .app-sidebar {
-    width: 270px;
+    width: 150px;
 }
 
 @media (max-width: 991px) {
@@ -52978,11 +52893,11 @@ body.transparent-mode *:hover::-webkit-scrollbar-thumb {
     }
 
     .icontext-menu.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .side-header {
-        width: 270px !important;
+        width: 150px !important;
     }
 
     .icontext-menu.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .app-sidebar {
-        width: 270px;
+        width: 150px;
     }
 }
 
